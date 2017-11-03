@@ -13,3 +13,5 @@ Add between the pluginGroups tags like the example below:
 </pluginGroups>
 
 And execute the maven command: mvn jetty:run
+
+PS: This project its not finished yet.
