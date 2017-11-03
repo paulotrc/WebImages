@@ -8,5 +8,5 @@ angular.module('ngdemo', ['ngdemo.filters', 'ngdemo.services', 'ngdemo.directive
         $routeProvider.when('/productsCreation', {templateUrl: 'partials/product-creation.html', controller: 'ProductCreationCtrl'});
         $routeProvider.when('/productsDetail', {templateUrl: 'partials/product-detail.html', controller: 'ProductDetailCtrl'});
         $routeProvider.when('/productsList', {templateUrl: 'partials/product-list.html', controller: 'ProductListCtrl'});
-        $routeProvider.otherwise({redirectTo: '/view1'});
+        $routeProvider.otherwise({redirectTo: '/productsList'});
     }]);
