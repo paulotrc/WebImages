@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Nov 03 00:02:09 BRST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-015f-7f9d-31e7-000015608920 
+on database directory memory:C:\Desenvolvimento\Workspaces\Workspace_Eclipse_Neon\WebImages\WIMG_DB with class loader WebAppClassLoader=WebImages@3062f9f4 
+Loaded from file:/C:/Users/Tarso/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_152-b16
+user.dir=C:\Desenvolvimento\Workspaces\Workspace_Eclipse_Neon\WebImages
+os.name=Windows 10 
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
