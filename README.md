@@ -1,6 +1,7 @@
 # WebImages
 
-Projeto Java / Maven / AngularJS / Rest / JPA / Hibernate 
+This is a web project CRUD java using the below tecnologies:
+Java / Maven / AngularJS / Rest / JPA / Hibernate / Embeded Jetty / Enbeded Derby
 
 Para rodar no Jetty:
 
