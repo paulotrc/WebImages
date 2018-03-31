@@ -17,11 +17,11 @@
 	        </tr>
 	        </thead>
 	        <tbody>
-	        <tr ng-repeat="product in products">
-	            <td>{{ product.nome }}</td>
-	            <td>{{ product.descricao }}</td>
-	            <td><a ng-click="editProduct(product.id)" class="btn btn-small btn-primary">edit</a></td>
-	            <td><a ng-click="deleteProduct(product.id)" class="btn btn-small btn-danger">delete</a></td>
+	        <tr ng-repeat="produto in produtos">
+	            <td>{{ produto.name }}</td>
+	            <td>{{ produto.description }}</td>
+	            <td><a ng-click="editProduct(produto.id)" class="btn btn-small btn-primary">edit</a></td>
+	            <td><a ng-click="deleteProduct(produto.id)" class="btn btn-small btn-danger">delete</a></td>
 	        </tr>
 	        </tbody>
 	    </table>

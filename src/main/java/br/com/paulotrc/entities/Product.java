@@ -87,4 +87,11 @@ public class Product {
 	public void setChilds_products(List<Product> childs_products) {
 		this.childs_products = childs_products;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", parent_product_id="
+				+ parent_product_id + ", childs_products=" + childs_products + "]";
+	}
+	
 }

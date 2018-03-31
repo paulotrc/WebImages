@@ -1,30 +1,30 @@
 <!doctype html>
-<html lang="en" ng-app="ngdemo">
+<html lang="en" ng-app="webimages">
 <head>
-    <meta charset="utf-8">
     <title>WebImages</title>
     <link rel="stylesheet" href="css/app.css"/>
 	<link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
 </head>
 <body>
-<ul class="menu">
-<!--     <li><a href="#/view1">view1</a></li> -->
-    <li><a href="#/product">product</a></li>
-    <li><a href="#/productsList">List of products</a></li>
-    <li><a href="#/productsDetail">Detail product</a></li>
-    <li><a href="#/productsCreation">Create new product</a></li>
-</ul>
-
+	<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	    <li class="breadcrumb-item active"><a href="#/productoLista">Lista de Produtos</a></li>
+	    <li class="breadcrumb-item"><a href="#/productoDetalhe">Visualizar Produto</a></li>
+	    <li class="breadcrumb-item"><a href="#/productoCriar">Novo Produto</a></li>
+	</ol>
+	</nav>
+	<div>
+		<div class="jumbotron">
+			<h1 class="text-center">Produtos</h1>
+		</div>
+	</div>
 <div ng-view></div>
 
-<!-- JQuery == -->
 <script src="js/jquery/jquery-2.0.3.js"></script>
-
-<!-- Bootstrap == -->
 <script src="js/bootstrap/bootstrap.js"></script>
 
--->
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular/angular-resource.js"></script>
 
