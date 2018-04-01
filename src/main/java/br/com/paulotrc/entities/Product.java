@@ -7,27 +7,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
-@Table(name = "Product", schema="WIMG")
+@Table(name = "TB_PRODUTO")
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "product_id", unique = true)
-    private int id;
+	@SequenceGenerator(name="SQ_PRODUTO", initialValue=1, allocationSize=10, sequenceName="SQ_PRODUTO")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "ID", unique = true)
+    private Long id;
 
-	@Column(name = "name", unique = true)
+	@Column(name = "NOME", unique = true)
 	private String name;
 
-	@Column(name = "description", unique = true)
+	@Column(name = "DESCRICAO", unique = true)
 	private String description;
 	
 	@OneToOne
@@ -41,18 +41,18 @@ public class Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(int id, String name, String description) {
+	public Product(Long id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

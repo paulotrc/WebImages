@@ -18,7 +18,7 @@ public class ProductServiceImpl  implements ProductService {
 	 
 	private final EntityManager em;
  
-	private static final String PERSISTENCE_UNIT_NAME = "WebImages_PU";
+	static final String PERSISTENCE_UNIT_NAME = "WebImagesPU";
 
 	public ProductServiceImpl(){
 		this.entityManagerFactory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
@@ -26,27 +26,49 @@ public class ProductServiceImpl  implements ProductService {
 	}
 	
 	public Product createProduct(Product product) {
-		em.persist(product);
+		try {
+			System.out.println(product);
+			em.getTransaction().begin();
+			em.persist(product);
+			em.getTransaction().commit();
+			em.close();
+		} catch (Exception e) {
+			System.out.println("Erro na transacao:");
+			e.printStackTrace();
+		}
 		return product;
 	}
 
 	public void dropProduct(Product product) {
-		em.remove(product);		
+		em.getTransaction().begin();
+		em.remove(product);
+		em.getTransaction().commit();
+		em.close();
 	}
 
 	public List<Product> readListAllProducts() {
+//		em.getTransaction().begin();
 		TypedQuery<Product> query = em.createQuery("select p from Product p", Product.class);
 		System.out.println("Passou para listar");
-		return query.getResultList();
+		List<Product> returnList = query.getResultList();
+//		em.close();
+		return returnList;
 	}
 
 	public Product updateProduct(Product product) {
-		return em.merge(product);
+		em.getTransaction().begin();
+		product = em.merge(product);
+		em.getTransaction().commit();
+		em.close();
+		return product;
 	}
 
 	public Product readProductById(int idProduct) {
+//		em.getTransaction().begin();
 		TypedQuery<Product> query = em.createQuery("select p from Product p where p.id = :id", Product.class);
-		return query.getSingleResult();
+		Product product = query.getSingleResult();
+//		em.close();
+		return product;
 	}
 
 }

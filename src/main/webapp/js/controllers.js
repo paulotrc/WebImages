@@ -20,12 +20,7 @@ app.controller('ProdutoListaCtrl',  listarProdutosFactory);
 
 function listarProdutosFactory($scope, $http){
 	debugger
-//	var produtos = [];
-//	produtos.push({nome:"Teste",descricao:"testeDescricao"});
-//	produtos.push({nome:"Teste2",descricao:"testeDescricao2"});
-//	$scope.produtos = produtos;
-	
-	
+
 	$http({
         method : 'GET',
         url : '/webimages/rest/listarProdutos'

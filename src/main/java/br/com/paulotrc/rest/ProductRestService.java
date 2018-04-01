@@ -16,7 +16,7 @@ import br.com.paulotrc.entities.Product;
 import br.com.paulotrc.service.ProductService;
 import br.com.paulotrc.serviceImpl.ProductServiceImpl;
 
-@Path("/products")
+@Path("/produto")
 public class ProductRestService {
 
 	ProductService productService;
@@ -45,6 +45,7 @@ public class ProductRestService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Product create(Product produto) {
+    	System.out.println("Criar produto:" +produto);
         return getProductService().createProduct(produto);
     }
 
