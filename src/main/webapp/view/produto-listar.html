@@ -17,7 +17,13 @@
 	        </tr>
 	        </thead>
 	        <tbody>
-	        <tr ng-repeat="produto in produtos">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<a ng-click="createNewProduct()" class="btn btn-primary">Novo Produto</a>
+					</span>
+					<input ng-model="filtro" ng-model-options="{debounce:500}" class="form-control" placeholder="Filtrar">
+				</div>	
+	        <tr ng-repeat="produto in produtos | filter : filtro" >
 	            <td>{{ produto.name }}</td>
 	            <td>{{ produto.description }}</td>
 	            <td><a ng-click="editProduct(produto.id)" class="btn btn-small btn-primary">edit</a></td>
@@ -25,7 +31,6 @@
 	        </tr>
 	        </tbody>
 	    </table>
-	    <a ng-click="createNewProduct()" class="btn btn-small">Criar novo Produto</a>
 	</div>
 </body>
 </html>

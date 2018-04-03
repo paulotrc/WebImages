@@ -8,28 +8,24 @@
 	<div class="container">
 	    <h1>Criar Produto</h1>
 	
-	    <form novalidate="novalidate" class="form-horizontal">
+	    <form novalidate="novalidate" class="form-horizontal" >
 	        <div class="control-group">
-	            <label class="control-label" for="inputFirstName">Nome:</label>
+	            <label class="control-label" for="inputNome">Nome:</label>
 	            <div class="controls">
-	                <input type="text" id="inputNome" ng-model="product.nome"/>
+	                <input type="text" id="name" ng-model="produto.name"/>{{produto.name}}
 	            </div>
 	        </div>
 	        <div class="control-group">
-	            <label class="control-label" for="inputLastName">Descricao:</label>
+	            <label class="control-label" for="inputDescricao">Descricao:</label>
 	            <div class="controls">
-	                <input type="text" id="inputDescricao" ng-model="product.descricao"/>
+	                <input type="text" id="descricao" ng-model="produto.description"/>{{produto.description}}
 	            </div>
-	        </div>
+			</div>
+			<p></p>
 	        <div class="control-group">
 	            <div class="controls">
-	              <!-- user-detail.html: -->
-	                <a ng-click="cancel()" class="btn btn-small">Cancelar</a>
-	                <a ng-click="updateProduct()" class="btn btn-small btn-primary">Atualizar Produto</a>
-	
-	              <!-- user-creation.html: -->
-	                <a ng-click="createNewProduct()" class="btn btn-small btn-primary">Criar novo Produto</a>
-	            </div>
+						<a type="submit" ng-click="salvar()"  class="btn btn-small btn-primary">Salvar</a>
+ 	            </div>
 	        </div>
 	    </form>
 	</div>
