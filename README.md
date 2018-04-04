@@ -2,7 +2,7 @@
 
 This is a web project CRUD java using the below tecnologies:
 
-Java / Maven / AngularJS / Rest / JPA / Hibernate / Embeded Jetty / Oracle XE
+Java / Maven / AngularJS / Rest with Jersey / JPA / Hibernate / Embeded Jetty / Oracle XE
 
 To run the eclipse project on Jetty you will need configure these settings:
 
